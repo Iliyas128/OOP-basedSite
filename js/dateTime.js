@@ -4,7 +4,7 @@ export default class DateAndTime {
         const hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
         const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
         const seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
-        
+
         return `${hours}:${minutes}:${seconds}`
     }
 
@@ -17,16 +17,16 @@ export default class DateAndTime {
         const date = new Date()
         const hours = date.getHours()
 
-        if(hours >= 6 && hours < 12) {
+        if (hours >= 6 && hours < 12) {
             return 'morning'
         }
-        if(hours >= 12 && hours < 18) {
+        if (hours >= 12 && hours < 18) {
             return 'day'
         }
-        if(hours >= 18 && hours < 24) {
+        if (hours >= 18 && hours < 24) {
             return 'evening'
         }
-        if(hours >= 0 && hours < 6) {
+        if (hours >= 0 && hours < 6) {
             return 'night'
         }
 

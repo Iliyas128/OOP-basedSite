@@ -3,7 +3,7 @@ import Slider from './js/slider.js'
 import Weather from './js/weather.js'
 import Joke from './js/jokes.js'
 import AudioPlayer from './js/audioPlayer.js'
-import DateAndTime from './js/dateandTime.js'
+import DateAndTime from './js/dateTime.js'
 
 // 1. DateAndTime
 const dateAndTime = new DateAndTime()
@@ -56,7 +56,7 @@ const humidity = document.getElementById('humidity')
 const weatherError = document.getElementById('weatherError')
 
 weatherCityInput.value = localStorage.getItem('city') || ''
-if(weatherCityInput.value) {
+if (weatherCityInput.value) {
     setWeatherDetails()
 }
 
@@ -67,7 +67,7 @@ weatherCityInput.addEventListener('blur', async () => { // blur - unfocus
 async function setWeatherDetails() {
     const isSuccess = await weather.fetchWeatherByCity(weatherCityInput.value)
     console.log(weather)
-    if(isSuccess) {
+    if (isSuccess) {
         weatherError.innerText = ''
         weatherIcon.src = weather.icon
         weatherTemp.innerText = weather.temp
@@ -99,7 +99,7 @@ changeJokeBtn.addEventListener('click', setRandomJoke)
 
 async function setRandomJoke() {
     const isSuccess = await joke.fetchRandomJoke()
-    if(isSuccess) {
+    if (isSuccess) {
         jokeText.innerText = joke.text
         jokeIcon.src = joke.iconUrl
     }
@@ -121,7 +121,7 @@ const playNextBtn = document.getElementById('playNextBtn')
 const playBtn = document.getElementById('playBtn')
 
 playBtn.addEventListener('click', () => {
-    if(audioPlayer.isPaused) {
+    if (audioPlayer.isPaused) {
         audioPlayer.playAudio()
         playBtn.style.backgroundImage = 'url(./assets/svg/pause.svg)'
     }
