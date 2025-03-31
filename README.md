@@ -33,8 +33,5 @@ This project is built on the principles of object-oriented programming (OOP) usi
 - OpenWeatherMap API
 - Chuck Norris Jokes API
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/momentum-clone.git
+## Link to site
+-https://oop-based-site.vercel.app/
